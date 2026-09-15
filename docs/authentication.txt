@@ -1,0 +1,15 @@
+Authentication
+
+The application uses access tokens and refresh tokens.
+
+The access token is short-lived and is used to authenticate API requests.
+
+The refresh token is long-lived and is stored in an HTTP-only cookie.
+
+When the access token expires, the frontend sends a request to the refresh endpoint.
+
+The server validates the refresh token and generates a new access token.
+
+The new access token is then used for subsequent API requests.
+
+The refresh token cannot be accessed directly from JavaScript because it is stored in an HTTP-only cookie.
